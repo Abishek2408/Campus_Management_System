@@ -1,75 +1,123 @@
 package com.campus.model;
 
+import java.util.Arrays;
+
 public class Student {
-    //Encapsulation - Hiding the data
-    //Instance variables
-    private int studentid;
-    private String studentname;
+    // Encapsulation - Hiding the data
+    // Instance variables
+    private int studentId;
+    private String studentName;
     private int age;
     private String department;
     private int[] marks;
 
-    //static variables
-    static int studentCount=0;
+    // Static variables
+    static int studentCount = 0;
 
-    //Default constructor
-    public Student(){
+    // Default constructor
+    public Student() {
         studentCount++;
     }
-    //parameterized constuctor
-    public Student(int[] studentid, String studentname, int age,
-    String department, int[] marks){
-        this.studentid=studentid;
-        this.studentname=studentname;
-        this.age=age;
-        this.department=department;
-        this.marks=marks;
+
+    // Parameterized constructor
+    public Student(int studentId, String studentName, int age,
+                   String department, int[] marks) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.age = age;
+        this.department = department;
+        this.marks = marks;
         studentCount++;
     }
-    //getters
-    public int getStudentid(){
-        return studentid; 
+
+    // Getters
+    public int getStudentId() {
+        return studentId; 
     }
-    public String getStudentname(){
-        return studentname;
+
+    public int getStudentid() {
+        return studentId; 
     }
-    public int getAge(){
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public String getStudentname() {
+        return studentName;
+    }
+
+    public int getAge() {
         return age;
     }
-    public String getDepartment(){
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public int[] getMarks() {
         return marks;
     }
-    //setters
-    public void setStudentid(int studentid){
-        this.studentid=studentid;   
-    }
-    public void setStudentname(String studentname){
-        this.studentname=studentname;
-    }
-    public void setAge(int age){
-        this.age=age;
-    }
-    public void setDepartment(String department){
-        this.department=department;
-    }
-    public void setMarks(int[] marks){
-        this.marks=marks;
+
+    public int[] getmarks() {
+        return marks;
     }
 
-    //Instances methods -belongs to object
-    public void displaysstudendInfo(){
-        System.out.println("Student Id:"+studentid);
-        System.out.println("Student Name:"+name);
-        System.out.println("Age:"+age);
-        System.out.println("Department:"+department);
+    // Setters
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;   
     }
-    
-    public void displayStudentInfo(Boolean showMarks){
+
+    public void setStudentid(int studentid) {
+        this.studentId = studentid;   
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void setStudentname(String studentname) {
+        this.studentName = studentname;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+
+    // Instance methods - belongs to object
+    public void displayStudentInfo() {
+        System.out.println("Student Id:" + studentId);
+        System.out.println("Student Name:" + studentName);
+        System.out.println("Age:" + age);
+        System.out.println("Department:" + department);
+    }
+
+    public void displaysstudendInfo() {
         displayStudentInfo();
     }
-    If (showMarks){
-        System.out.println("Marks:"+java.util.Array.toString(marks));
+    
+    public void displayStudentInfo(boolean showMarks) {
+        displayStudentInfo();
+        if (showMarks && marks != null) {
+            System.out.println("Marks:" + Arrays.toString(marks));
+        }
     }
-    //static method -belongs to class,not to object
-        public static void displaysstudendInfo
 
+  
+
+    // Static method - belongs to class, not to object
+    public static void displayStudentCount() {
+        System.out.println("total number of students:" + studentCount);
+    }
+
+
+    
+}
