@@ -2,7 +2,7 @@ package com.campus.model;
 
 import java.util.Arrays;
 
-public class Student {
+public abstract  class Student {
     // Encapsulation - Hiding the data
     // Instance variables
     private int studentId;
@@ -110,6 +110,7 @@ public class Student {
             System.out.println("Marks:" + Arrays.toString(marks));
         }
     }
+    abstract void studentType();
 
   
 
